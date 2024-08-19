@@ -1,0 +1,77 @@
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class=" carousel-inner position-relative">
+      <div class="overlap position-absolute"></div>
+      <div class="carousel-item active position-relative">
+        <img src="../../../assets/Images/proxy-image (3).jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item position-relative">
+        <img src="../../../assets/Images/proxy-image.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item position-relative">
+        <img src="../../../assets/Images/proxy-image (2).jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="homeText">
+       <h1>Live Academy</h1>
+       <p>"people expect to be bored by elearning -- let's show them it doesn't have to be like that!"</p>
+       <div class="btns">
+           <button>join us</button>
+           <button>show films</button>
+       </div>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row py-3">
+      <div class="p-4">
+          <input type="text" class="form-control" placeholder="title....." [(ngModel)]="term" name="" id="">
+      </div>
+      <div class="col-md-4  d-flex align-items-center">
+          <div>
+              <div class="brdr w-25 mb-3 "></div>
+              <h2 class="h5">Trendng <br> Movies<br/> To Watch Right Now </h2>
+              <p class="text-muted py-2">Most watched Movies by the day</p>
+              <div class="brdr w-100 mb-3"></div>
+          </div>
+      </div>
+      <div *ngFor="let movie of trendingMovies|search:term" class="col-md-2">
+         <app-media-item [item]="movie"></app-media-item> 
+      </div>
+  </div>
+  <div class="row py-5">
+      <div class="col-md-4  d-flex align-items-center">
+          <div>
+              <div class="brdr w-25 mb-3 "></div>
+              <h2 class="h5">Trendng <br> Tv<br/> To Watch Right Now </h2>
+              <p class="text-muted py-2">Most watched Movies by the day</p>
+              <div class="brdr w-100 mb-3"></div>
+          </div>
+      </div>
+      <div *ngFor="let tv of trendingTv" class="col-md-2">
+         <app-media-item [item]="tv"></app-media-item> 
+      </div>
+  </div>
+  <div class="row py-5">
+      <div class="col-md-4  d-flex align-items-center">
+          <div>
+              <div class="brdr w-25 mb-3 "></div>
+              <h2 class="h5">Trendng <br> People<br/> To Watch Right Now </h2>
+              <p class="text-muted py-2">Most watched People by the day</p>
+              <div class="brdr w-100 mb-3"></div>
+          </div>
+      </div>
+      <div *ngFor="let movie of trendingPeople" class="col-md-2">
+         <app-media-item [item]="movie"></app-media-item> 
+      </div>
+  </div>
+</div>

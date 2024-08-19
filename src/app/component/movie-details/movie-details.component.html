@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <img *ngIf ="itemDetails.poster_path" class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+ itemDetails.poster_path" alt="">
+            <img *ngIf = "itemDetails.profile_path" class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+ itemDetails.profile_path" alt="">
+        </div>
+        <div class="col-md-9 d-flex align-items-center">
+              <div>
+                  <h3 class="my-2">{{itemDetails.title}} {{itemDetails.name}}</h3>
+                  <p class="py-2 text-muted">{{itemDetails.overview|watch:30}}</p>
+                  
+                  <h6 *ngIf="itemDetails.vote_count">vote_count :{{itemDetails.vote_count}}</h6>
+                  <h6 *ngIf="itemDetails.vote_average">vote_average :{{itemDetails.vote_average}}</h6>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row mt-5">
+    <h3 class="pb-3">Similar films</h3>
+    <div *ngFor="let item of similarMovies" class="col-md-2">
+        <app-media-item [item]="item"></app-media-item> 
+     </div>
+</div> -->

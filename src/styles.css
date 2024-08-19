@@ -4,3 +4,31 @@
   font-family: Montserrat Alternates;
   margin-bottom: 0;
 }
+
+:root{
+  --bgColor:#131722;
+  --lightBgColor:#24baef;
+  --bgTreansparent:rgba(36,186,239,.6);
+  --fontColor:#fff;
+  --borderColor:#a8a8a83d;
+  --borderHeight:1px;
+  --secondFontColor:#949cb0;
+}
+
+body{
+  background-color:var(--bgColor);
+  color:#fff;
+  overflow-x: hidden;
+  padding:0px;
+  margin:0px;
+}
+a,a:hover{
+  color:#fff;
+  text-decoration:none;
+}
+.input-mine
+{
+  background-color:transparent;
+  color:#fff;
+  border:1px solid var(--borderColor);
+}
