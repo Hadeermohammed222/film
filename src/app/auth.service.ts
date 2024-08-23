@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthService {
-  baseUrl:string = 'http://localhost:3007/SignUp';
+  baseUrl:string = 'http://localhost:3005/SignUp';
 
   constructor(private http:HttpClient) { }
   signUp(data:string):Observable<any>{

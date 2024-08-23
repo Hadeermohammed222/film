@@ -50,3 +50,9 @@
     color:var(--text-color);
     border:solid 1px lightgrey;
 }
+.btns button{
+    background-color:var(--lightBgColor);
+    border-radius:5px;
+    color:white;
+    padding:5px;
+}

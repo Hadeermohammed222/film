@@ -1,36 +1,4 @@
 {
   "SignUp": [
-    {
-      "id": "2c45",
-      "firstname": "hadeer",
-      "lastname": "mohammed",
-      "age": "24",
-      "email": "hm8830733@gmail.com",
-      "password": "QSX123ASD"
-    },
-    {
-      "id": "1344",
-      "firstname": "hadeer",
-      "lastname": "mohammed",
-      "age": "24",
-      "email": "hm8830733@gmail.com",
-      "password": "QSX123ASDFGH"
-    },
-    {
-      "id": "65c7",
-      "firstname": "hadeer",
-      "lastname": "mohammed",
-      "age": "24",
-      "email": "hm8830733@gmail.com",
-      "password": "QWERT"
-    },
-    {
-      "id": "c354",
-      "firstname": "hadeer",
-      "lastname": "mohammed",
-      "age": "24",
-      "email": "hm8830733@gmail.com",
-      "password": "IOPPP"
-    }
   ]
 }
