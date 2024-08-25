@@ -34,7 +34,7 @@
             <p class="m-0" *ngIf="registerForm.get('password')?.getError('required')">password is required</p>
             <p class="m-0" *ngIf="registerForm.get('password')?.getError('pattern')">password must be uppercase</p>
          </div>
-          <button (click)="formregiter(registerForm)" class="btn btn-info">
+          <button (click)="formregiter(registerForm);refresh();" class="btn btn-info">
               <span *ngIf="!isLoading">register</span>
               <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
           </button>

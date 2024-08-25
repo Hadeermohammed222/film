@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthService {
-  baseUrl:string = 'http://localhost:3005/SignUp';
+  baseUrl:string = 'https://json-server-i34d.vercel.app/SignUp';
 
+  private isLoggedIn = false;
   constructor(private http:HttpClient) { }
   signUp(data:string):Observable<any>{
       return this.http.post(this.baseUrl,data);
@@ -19,5 +20,16 @@ export class AuthService {
   getUsers():Observable<any>{
     return this.http.get(this.baseUrl);
   }
-  
+
+  login() {
+    this.isLoggedIn = true;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+  }
+
+  isAuthenticated(): boolean {
+    return this.isLoggedIn;
+  }
 } 

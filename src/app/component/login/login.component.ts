@@ -34,13 +34,17 @@ export class LoginComponent implements OnInit {
       )
   }
 
-  formsignin(form:FormGroup):void{
-    if(form.valid){
-    this.isLoading= true;  
-    this.user = this.users.find(user => user.email === this.email && user.password === this.password);
-    if(this.user){
-      this.router.navigate(['/home']);
+  formsignin(form: FormGroup): void {
+    if (form.valid) {
+      this.isLoading = true;  
+      this.user = this.users.find(user => user.email === this.email && user.password === this.password);
+      if (this.user) {
+        this._authService.login();
+        this.router.navigate(['/home']);
+      } else {
+        this.error = 'Invalid credentials';
+      }
+      this.isLoading = false;
     }
-   } 
   }
-}
+}  
